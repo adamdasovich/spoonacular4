@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/github.io/spoontacular4/static/css/main.96aa7edc.css",
-    "main.js": "/github.io/spoontacular4/static/js/main.16d3504c.js",
-    "index.html": "/github.io/spoontacular4/index.html",
-    "main.96aa7edc.css.map": "/github.io/spoontacular4/static/css/main.96aa7edc.css.map",
-    "main.16d3504c.js.map": "/github.io/spoontacular4/static/js/main.16d3504c.js.map"
+    "main.css": "/github.io/spoonacular4/static/css/main.96aa7edc.css",
+    "main.js": "/github.io/spoonacular4/static/js/main.16d3504c.js",
+    "index.html": "/github.io/spoonacular4/index.html",
+    "main.96aa7edc.css.map": "/github.io/spoonacular4/static/css/main.96aa7edc.css.map",
+    "main.16d3504c.js.map": "/github.io/spoonacular4/static/js/main.16d3504c.js.map"
   },
   "entrypoints": [
     "static/css/main.96aa7edc.css",
