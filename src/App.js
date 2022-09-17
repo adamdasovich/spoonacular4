@@ -33,6 +33,19 @@ const App = () => {
 
 	return (
 		<>
+			<div>
+				<section>
+					<label>What kind of food are you planning to eat?</label>
+					<input
+						type='text'
+						placeholder='Search for a paired wine.'
+						value={mealSelection}
+						onChange={handleMealSelectionChange} />
+					<button onClick={getPairedWineData}>Get Wine Pairing</button>
+				</section>
+
+				{pairedWineData && <WineList pairedWineData={pairedWineData} mealSelection={mealSelection} />}
+			</div>
 			<div className='calories'>
 				<section className='controls'>
 					<label htmlFor='calories'>How many daily calories do you want to consume?  </label>
@@ -45,18 +58,6 @@ const App = () => {
 				</section>
 				<button onClick={getMealData}>Get Daily Meal Plan</button>
 				{mealData && <MealList mealData={mealData} />}
-			</div>
-			<div>
-				<section>
-					<label>What kind of food are you planning to eat?</label>
-					<input
-						type='text'
-						placeholder='Search for a paired wine.'
-						value={mealSelection}
-						onChange={handleMealSelectionChange} />
-				</section>
-				<button onClick={getPairedWineData}>Get Wine Pairing</button>
-				{pairedWineData && <WineList pairedWineData={pairedWineData} mealSelection={mealSelection} />}
 			</div>
 
 		</>
