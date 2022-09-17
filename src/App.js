@@ -41,7 +41,7 @@ const App = () => {
 						placeholder='Search for a paired wine.'
 						value={mealSelection}
 						onChange={handleMealSelectionChange} />
-					<button onClick={getPairedWineData}>Get Wine Pairing</button>
+					<button onClick={getPairedWineData}>Adam has paired some wines for you</button>
 				</section>
 
 				{pairedWineData && <WineList pairedWineData={pairedWineData} mealSelection={mealSelection} />}
