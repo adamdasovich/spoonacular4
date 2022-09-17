@@ -35,7 +35,7 @@ const App = () => {
 		<>
 			<div>
 				<section>
-					<label>What kind of food are you planning to eat?</label>
+					<label>What kind of food are you planning to eat? Isn't Adam awesome?</label>
 					<input
 						type='text'
 						placeholder='Search for a paired wine.'
