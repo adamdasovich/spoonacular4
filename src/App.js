@@ -48,7 +48,7 @@ const App = () => {
 			</div>
 			<div className='calories'>
 				<section className='controls'>
-					<label htmlFor='calories'>How many daily calories do you want to consume?  </label>
+					<label htmlFor='calories'>How many daily calories do you want to consume... Mike?  </label>
 					<input
 						type='number'
 						placeholder='Calories'
