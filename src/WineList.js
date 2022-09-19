@@ -13,7 +13,7 @@ const WineList = ({ pairedWineData, mealSelection }) => {
 					</ul>
 					<div className='wineText'>{pairedWineData.pairingText}</div>
 				</div>
-				<h3>One reccomended wine is:  {pairedWineData.productMatches[0].title}</h3>
+				<h3>One recommended wine is:  {pairedWineData.productMatches[0].title}</h3>
 				<ul>
 					<li className='wineTitle'></li>
 					<li className='wineDescription'>{pairedWineData.productMatches[0].description}</li>
