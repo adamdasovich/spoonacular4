@@ -65,8 +65,10 @@ const App = () => {
 						value={calories}
 						onChange={handleCalorieChange} />
 					<button onClick={getMealData}>Get Daily Meal Plan</button>
-
 				</section>
+				<p>Scroll down to see a suggested menu.  Click 'Get Daily Meal Plan' again for
+					another suggestion.
+				</p>
 				{mealData && <MealList mealData={mealData} />}
 			</div>
 
