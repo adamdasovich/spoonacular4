@@ -4,8 +4,8 @@ import WineList from './WineList'
 
 const App = () => {
 	const [mealData, setMealData] = useState(null)
-	const [calories, setCalories] = useState(2000)
-	const [mealSelection, setMealSelection] = useState("steak")
+	const [calories, setCalories] = useState(0)
+	const [mealSelection, setMealSelection] = useState("")
 	const [pairedWineData, setPairedWineData] = useState(null)
 
 
@@ -35,28 +35,38 @@ const App = () => {
 		<>
 			<div>
 				<section>
-					<label>What kind of food are you planning to eat? Isn't Adam awesome?</label>
-					<input
-						type='text'
-						placeholder='Search for a paired wine.'
-						value={mealSelection}
-						onChange={handleMealSelectionChange} />
-					<button onClick={getPairedWineData}>Adam has paired some wines for you</button>
+					<p className='app-description'>
+						This is a simple app that accepts a food, cuisine or
+						ingredient and returns a list of wine pairings with descriptions.
+					</p>
+					<section className='wine-pairing'>
+						<label className='label'>What kind of food are you planning to eat?</label>
+						<input
+							type='text'
+							placeholder='food, cuisine or ingredient'
+							value={mealSelection}
+							onChange={handleMealSelectionChange} />
+						<button onClick={getPairedWineData}>Click to see paired wines</button>
+					</section>
 				</section>
 
 				{pairedWineData && <WineList pairedWineData={pairedWineData} mealSelection={mealSelection} />}
 			</div>
 			<div className='calories'>
-				<section className='controls'>
-					<label htmlFor='calories'>How many daily calories do you want to consume... Mike?  </label>
+				<p className='app-description'>
+					This is a simple app that will develop a daily menu for you
+					dependant on the the amount of daily calories you choose to consume.
+				</p>
+				<section className='wine-paring'>
+					<label className="label" htmlFor='calories'>How many daily calories do you want to consume? </label>
 					<input
 						type='number'
 						placeholder='Calories'
 						value={calories}
-						onChange={handleCalorieChange}
-					/>
+						onChange={handleCalorieChange} />
+					<button onClick={getMealData}>Get Daily Meal Plan</button>
+
 				</section>
-				<button onClick={getMealData}>Get Daily Meal Plan</button>
 				{mealData && <MealList mealData={mealData} />}
 			</div>
 
