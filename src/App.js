@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import MealList from './MealList'
 import WineList from './WineList'
+import FoodList from './FoodList'
 
 const App = () => {
 	const [mealData, setMealData] = useState(null)
 	const [calories, setCalories] = useState(0)
 	const [mealSelection, setMealSelection] = useState("")
 	const [pairedWineData, setPairedWineData] = useState(null)
+	const [wineSelection, setWineSelection] = useState("")
+	const [pairedFoodData, setPairedFoodData] = useState(null)
 
 
 	const handleCalorieChange = (e) => {
@@ -31,6 +34,17 @@ const App = () => {
 		console.log(data)
 	}
 
+	const handleWineSelectionChange = (e) => {
+		setWineSelection(e.target.value)
+	}
+
+	const getPairedFoodData = async () => {
+		const response = await fetch(`https://api.spoonacular.com/food/wine/dishes?apiKey=5bc777447af1431c92d0d8a3a11f6d96&wine=${wineSelection}`)
+		const data = await response.json()
+		setPairedFoodData(data)
+		console.log(data)
+	}
+
 	return (
 		<>
 			<div>
@@ -51,6 +65,24 @@ const App = () => {
 				</section>
 
 				{pairedWineData && <WineList pairedWineData={pairedWineData} mealSelection={mealSelection} />}
+			</div>
+			<div>
+				<section>
+					<p className='app-description'>
+						This is a simple app that accepts a wine type and returns a list of food pairings with descriptions.
+					</p>
+					<section className='food-pairing'>
+						<label className='label'>What kind of wine are you planning to have?</label>
+						<input
+							type='text'
+							placeholder='wine type'
+							value={wineSelection}
+							onChange={handleWineSelectionChange} />
+						<button onClick={getPairedFoodData}>Click to see paired meals</button>
+					</section>
+				</section>
+
+				{pairedFoodData && <FoodList pairedFoodData={pairedFoodData} wineSelection={wineSelection} />}
 			</div>
 			<div className='calories'>
 				<p className='app-description'>
