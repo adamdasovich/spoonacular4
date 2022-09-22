@@ -14,7 +14,7 @@ const App = () => {
 	}
 
 	const getMealData = async () => {
-		const response = await fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=30260263cf364e199fe6f749f894680d&timeFrame=day&targetCalories=${calories}`)
+		const response = await fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=5bc777447af1431c92d0d8a3a11f6d96&timeFrame=day&targetCalories=${calories}`)
 		const data = await response.json()
 		setMealData(data)
 		console.log(data)
@@ -25,7 +25,7 @@ const App = () => {
 	}
 
 	const getPairedWineData = async () => {
-		const response = await fetch(`https://api.spoonacular.com/food/wine/pairing?apiKey=30260263cf364e199fe6f749f894680d&food=${mealSelection}`)
+		const response = await fetch(`https://api.spoonacular.com/food/wine/pairing?apiKey=5bc777447af1431c92d0d8a3a11f6d96&food=${mealSelection}`)
 		const data = await response.json()
 		setPairedWineData(data)
 		console.log(data)

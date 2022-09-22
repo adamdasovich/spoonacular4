@@ -5,7 +5,7 @@ const Meal = ({ meal }) => {
 
 	useEffect(() => {
 		const getImage = async () => {
-			const response = await fetch(`https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=30260263cf364e199fe6f749f894680d&includeNutrition=false`)
+			const response = await fetch(`https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=5bc777447af1431c92d0d8a3a11f6d96&includeNutrition=false`)
 			const data = await response.json()
 			setImageUrl(data.image)
 		}
