@@ -16,6 +16,7 @@ body {
 
 section {
 	margin: 2rem 0 1rem 0;
+	border:rgba(77,77,77, 0.15) 2px solid;
 }
 .control {
 	display: flex;
